@@ -187,9 +187,9 @@
                         joinRoomButton.setAttribute('data-broadcaster', room.broadcaster);
                         joinRoomButton.setAttribute('data-roomToken', room.broadcaster);
                         alert("Joining");
-                        this.disabled = true;
-                        var broadcaster = this.getAttribute('data-broadcaster');
-                        var roomToken = this.getAttribute('data-roomToken');
+                        joinRoomButton.disabled = true;
+                        var broadcaster = joinRoomButton.getAttribute('data-broadcaster');
+                        var roomToken = joinRoomButton.getAttribute('data-roomToken');
                         broadcastUI.joinRoom({
                             roomToken: roomToken,
                             joinUser: broadcaster
