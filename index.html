@@ -186,7 +186,6 @@
                         var joinRoomButton = tr.querySelector('.join');
                         joinRoomButton.setAttribute('data-broadcaster', room.broadcaster);
                         joinRoomButton.setAttribute('data-roomToken', room.broadcaster);
-                        alert("Joining");
                         joinRoomButton.disabled = true;
                         var broadcaster = joinRoomButton.getAttribute('data-broadcaster');
                         var roomToken = joinRoomButton.getAttribute('data-roomToken');
@@ -195,17 +194,6 @@
                             joinUser: broadcaster
                         });
                         hideUnnecessaryStuff();
-                        /*joinRoomButton.onclick = function() {
-                            this.disabled = true;
-
-                            var broadcaster = this.getAttribute('data-broadcaster');
-                            var roomToken = this.getAttribute('data-roomToken');
-                            broadcastUI.joinRoom({
-                                roomToken: roomToken,
-                                joinUser: broadcaster
-                            });
-                            hideUnnecessaryStuff();
-                        };*/
                     },
                     onNewParticipant: function(numberOfViewers) {
                         document.title = 'Viewers: ' + numberOfViewers;
