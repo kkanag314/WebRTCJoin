@@ -78,7 +78,7 @@ function runServer() {
             addr.address = 'localhost';
         }
 
-        console.log('Server listening at http://' + addr.address + ':' + addr.port);
+        //console.log('Server listening at http://' + addr.address + ':' + addr.port);
     });
 }
 
